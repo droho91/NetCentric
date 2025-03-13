@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package personpb;
+
+// 👇 Thêm dòng này để chỉ định đường dẫn gói Go
+option go_package = "example.com/protobuf-test/personpb";
+
+message Person {
+  string name = 1;
+  int32 age = 2;
+  string email = 3;
+}
+
+message People {
+  repeated Person persons = 1;
+}
